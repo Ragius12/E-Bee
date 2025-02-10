@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suramaritrain</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        .navbar { background: #444; padding: 15px; text-align: center; }
+        .navbar a { color: white; text-decoration: none; margin: 15px; font-size: 18px; padding: 10px; background: #555; border-radius: 5px; }
+        .content { padding: 20px; display: none; }
+        .active { display: block; }
+        .product-container { display: flex; flex-direction: column; gap: 20px; }
+        .product { display: flex; align-items: center; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: white; }
+        .product img { width: 150px; height: auto; border-radius: 8px; }
+        .product-info { padding: 15px; flex: 1; }
+        .buy-button { background: #28a745; color: white; padding: 10px; text-decoration: none; border-radius: 5px; }
+        .price { font-weight: bold; color: #d9534f; }
+        .flag { width: 30px; height: auto; margin-left: 10px; }
+        .carousel { display: flex; overflow: hidden; width: 100%; }
+        .carousel img { width: 100%; transition: transform 0.5s ease-in-out; }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+        
+        let index = 0;
+        function rotateImages() {
+            const images = document.querySelectorAll('.carousel img');
+            images.forEach((img, i) => {
+                img.style.transform = `translateX(${-100 * index}%)`;
+            });
+            index = (index + 1) % images.length;
+        }
+        setInterval(rotateImages, 3000);
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showSection('accueil')">Accueil</a>
+        <a href="#" onclick="showSection('fiches')">Fiches de révision</a>
+        <a href="#" onclick="showSection('modeles')">Modèles 3D</a>
+        <a href="#" onclick="showSection('cours')">Cours et tutoriels</a>
+        <a href="#" onclick="showSection('ebooks')">E-Books</a>
+    </div>
+    
+    <div id="accueil" class="content active">
+        <h2>Produits les plus vus</h2>
+        <div class="carousel">
+            <a href="https://ragiussuramar.gumroad.com/l/rsldl"> <img src="file:///C:/Users/ragiu/Desktop/R%C3%A9visions/Intro%20Physics.jpg" alt="GIGA PACK - Fiche de révision - Méthodes - Erreurs à éviter (Concours TSI)" style="width:400px;height:400px;"> </a>
+			<a href="https://bit.ly/3EwE2BE"><img src="https://img-c.udemycdn.com/course/750x422/805992_d306_8.jpg" alt="💻 Formation Développeur Web" style="width:400px;height:400px;"> </a>
+            <a href="#"><img src="#" alt="#" style="width:400px;height:400px;"> </a>
+			<a href="#"><img src="#" alt="#" style="width:400px;height:400px;"> </a>
+			<a href="#"><img src="#" alt="#" style="width:400px;height:400px;"> </a>
+			<a href="#"><img src="#" alt="#" style="width:400px;height:400px;"> </a>
+			<a href="#"><img src="#" alt="#" style="width:400px;height:400px;"> </a>
+			<a href="#"><img src="#" alt="#" style="width:400px;height:400px;"> </a>
+        </div>
+    </div>
+    
+    <div id="fiches" class="content">
+        <h2>Fiches de révision</h2>
+		
+        <div class="product-container">
+            <div class="product">
+                <div class="product-info">
+                    <h3>📖 GIGA PACK - Fiche de révision - Méthodes - Erreurs à éviter (Concours TSI) <img src="https://images.emojiterra.com/twitter/v13.1/512px/1f1eb-1f1f7.png" class="flag" alt="Français" style="width:25px;height:25px;"></h3>
+                    <p>🎯 Préparez-vous efficacement au concours TSI 2025 !<Br>✅ Format PDF téléchargeable instantanément.<Br>🔥 Parfait pour les étudiants en Prépa TSI qui veulent maximiser leur réussite !
+<Br>📌Ces fiches m'ont permis d'être admissible à Centrale l'année dernière !!<Br>🚀Sciences de l'ingénieur, physique chimie, math : toutes ces matières en un pack offre !</p>
+                    <p class="price">25.00€</p>
+                    <a href="https://ragiussuramar.gumroad.com/l/rsldl" class="buy-button">📥 Télécharger</a>
+                </div>
+                <img src="file:///C:/Users/ragiu/Desktop/R%C3%A9visions/Intro%20Physics.jpg" alt="Fiche 1" style="width:250px;height:250px;">
+            </div>
+        </div>
+		
+		<div class="product-container">
+            <div class="product">
+				<img src="file:///C:/Users/ragiu/Desktop/R%C3%A9visions/Intro%20Physics.jpg" alt="Fiche 1" style="width:250px;height:250px;">
+				<Div Align=RIGHT>
+                <div class="product-info">
+                    <h3>📖 GIGA PACK - Fiche de révision - Méthodes - Erreurs à éviter (Concours TSI) <img src="https://images.emojiterra.com/twitter/v13.1/512px/1f1eb-1f1f7.png" class="flag" alt="Français" style="width:25px;height:25px;"></h3>
+                    <p>🎯 Préparez-vous efficacement au concours TSI 2025 !<Br>✅ Format PDF téléchargeable instantanément.<Br>🔥 Parfait pour les étudiants en Prépa TSI qui veulent maximiser leur réussite !
+<Br>📌Ces fiches m'ont permis d'être admissible à Centrale l'année dernière !!<Br>🚀Sciences de l'ingénieur, physique chimie, math : toutes ces matières en un pack offre !</p>
+                    <p class="price">25.00€</p>
+                    <a href="https://ragiussuramar.gumroad.com/l/rsldl" class="buy-button">📥 Télécharger</a>
+				</Div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="product-container">
+            <div class="product">
+                <div class="product-info">
+                    <h3>📖 GIGA PACK - Fiche de révision - Méthodes - Erreurs à éviter (Concours TSI) <img src="https://images.emojiterra.com/twitter/v13.1/512px/1f1eb-1f1f7.png" class="flag" alt="Français" style="width:25px;height:25px;"></h3>
+                    <p>🎯 Préparez-vous efficacement au concours TSI 2025 !<Br>✅ Format PDF téléchargeable instantanément.<Br>🔥 Parfait pour les étudiants en Prépa TSI qui veulent maximiser leur réussite !
+<Br>📌Ces fiches m'ont permis d'être admissible à Centrale l'année dernière !!<Br>🚀Sciences de l'ingénieur, physique chimie, math : toutes ces matières en un pack offre !</p>
+                    <p class="price">25.00€</p>
+                    <a href="https://ragiussuramar.gumroad.com/l/rsldl" class="buy-button">📥 Télécharger</a>
+                </div>
+                <img src="file:///C:/Users/ragiu/Desktop/R%C3%A9visions/Intro%20Physics.jpg" alt="Fiche 1" style="width:250px;height:250px;">
+            </div>
+        </div>
+		
+    </div>
+    
+	
+	
+	
+	
+	
+	
+    <div id="modeles" class="content">
+        <h2>Modèles 3D</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Modèle 3D 1">
+                <div class="product-info">
+                    <h3>Modèle 3D 1 <img src="https://images.emojiterra.com/twitter/v13.1/512px/1f1eb-1f1f7.png" class="flag" alt="Français" style="width:25px;height:25px;"></h3>
+                    <p>Description du modèle 3D.</p>
+                    <p class="price">15€</p>
+                    <a href="#" class="buy-button">Acheter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	
+	
+	
+	
+	
+	
+	
+    <div id="cours" class="content">
+        <h2>Cours et tutoriels</h2>
+        <div class="product-container">
+            <div class="product">
+                <div class="product-info">
+                    <h3>💻 Formation Développeur Web <img src="https://images.emojiterra.com/twitter/v13.1/512px/1f1eb-1f1f7.png" class="flag" alt="Français" style="width:25px;height:25px;"></h3>
+                    <p>✅ Découvrez les langages essentiels : HTML, CSS, JavaScript.
+<Br>✅ Maîtrisez les frameworks et outils modernes.
+<Br>✅ Créez des projets concrets pour enrichir votre portfolio.
+<Br>✅ Accès à vie.
+
+<Br>💡 Idéal pour les freelances débutants et futurs!
+
+<Br>🔗 Inscrivez-vous maintenant et lancez votre carrière !</p>
+                    <p class="price">24.99€</p>
+                    <a href="https://bit.ly/3EwE2BE" class="buy-button">🎓 Voir la formation</a>
+                </div>
+                <img src="https://img-c.udemycdn.com/course/750x422/805992_d306_8.jpg" alt="Cours 1" style="width:250px;height:250px;">
+            </div>
+        </div>
+    </div>
+    
+	
+	
+	
+	
+	
+	
+	
+    <div id="ebooks" class="content">
+        <h2>E-Books</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="E-Book 1">
+                <div class="product-info">
+                    <h3>E-Book 1 <img src="https://via.placeholder.com/30" class="flag" alt="Français"></h3>
+                    <p>Description de l'e-book.</p>
+                    <p class="price">10€</p>
+                    <a href="#" class="buy-button">Acheter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
